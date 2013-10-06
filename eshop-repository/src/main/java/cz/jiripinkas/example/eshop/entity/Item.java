@@ -12,8 +12,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 /**
  * Entity implementation class for Entity: Item
  * 
@@ -33,7 +31,6 @@ public class Item implements Serializable {
 
 	private double price;
 
-	@JsonIgnore
 	@OneToMany(mappedBy = "item")
 	private List<OrderedItem> orderedItems;
 
