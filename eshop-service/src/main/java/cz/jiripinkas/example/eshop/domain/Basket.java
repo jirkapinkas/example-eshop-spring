@@ -1,12 +1,15 @@
 package cz.jiripinkas.example.eshop.domain;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashMap;
 
 import cz.jiripinkas.example.eshop.entity.Item;
 import cz.jiripinkas.example.eshop.entity.OrderedItem;
 
-public class Basket {
+public class Basket implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private HashMap<Integer, OrderedItem> items = new HashMap<Integer, OrderedItem>();
 

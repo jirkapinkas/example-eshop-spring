@@ -18,6 +18,8 @@ import javax.persistence.Table;
 @Table(name = "ORDERED_ITEM")
 public class OrderedItem implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int orderedItemId;
@@ -31,8 +33,6 @@ public class OrderedItem implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "ITEM_ID")
 	private Item item;
-
-	private static final long serialVersionUID = 1L;
 
 	public UserOrder getUserOrder() {
 		return userOrder;
